@@ -61,7 +61,9 @@ jobs:
           name: Build Success
           when: on_success
           command: |
-            if [ "$CIRCLE_BRANCH" == "master" ] && [ "$CI_PULL_REQUEST" == "false" ]; then
+            echo $CIRCLE_PULL_REQUESTS
+            echo $CIRCLE_BRANCH
+            if [ "$CIRCLE_BRANCH" == "master" ] && [ "$CIRCLE_PULL_REQUESTS" == "false" ]; then
               ./deploy.sh
               echo `ls`
               git push origin master
