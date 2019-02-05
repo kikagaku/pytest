@@ -67,5 +67,5 @@ jobs:
             echo $CIRCLE_PR_USERNAME
             if [ "$CIRCLE_BRANCH" == "master" ] && ./deploy.sh; then
               echo `ls`
-              git push origin master
+              git push --force --quiet https://kikagaku:${GH_TOKEN}@github.com/kikagaku/pytest master:master
             fi
