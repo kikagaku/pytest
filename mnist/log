@@ -6,6 +6,15 @@
         "validation/main/accuracy": 0.734065314133962,
         "epoch": 1,
         "iteration": 15,
-        "elapsed_time": 15.496938814999998
+        "elapsed_time": 15.353343353000001
+    },
+    {
+        "main/loss": 0.9826208551724752,
+        "main/accuracy": 0.7650553385416666,
+        "validation/main/loss": 0.7103298107782999,
+        "validation/main/accuracy": 0.8252197901407877,
+        "epoch": 2,
+        "iteration": 30,
+        "elapsed_time": 30.502918371999996
     }
 ]
