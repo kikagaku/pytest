@@ -63,5 +63,6 @@ jobs:
           command: |
             if [ "$CIRCLE_BRANCH" == "master" ] && [ "$CI_PULL_REQUEST" == "false" ]; then
               ./deploy.sh
+              echo `ls`
               git push origin master
             fi
