@@ -65,7 +65,8 @@ jobs:
             echo $CIRCLE_BRANCH
             echo $CIRCLE_USERNAME
             echo $CIRCLE_PR_USERNAME
-            if [ "$CIRCLE_BRANCH" == "master" ] && ./deploy.sh; then
+            if [ "$CIRCLE_BRANCH" == "master" ]; then
               echo `ls`
-              git push --force --quiet https://kikagaku:${GH_TOKEN}@github.com/kikagaku/pytest master:master
+              ./deploy.sh
+              git push --force https://kikagaku:${GH_TOKEN}@github.com/kikagaku/pytest master:master
             fi
