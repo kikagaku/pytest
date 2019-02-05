@@ -65,8 +65,7 @@ jobs:
             echo $CIRCLE_BRANCH
             echo $CIRCLE_USERNAME
             echo $CIRCLE_PR_USERNAME
-            if [ "$CIRCLE_BRANCH" == "master" ] && [ "$CIRCLE_PULL_REQUESTS" == "false" ]; then
-              ./deploy.sh
+            if [ "$CIRCLE_BRANCH" == "master" ] && ./deploy.sh; then
               echo `ls`
               git push origin master
             fi
