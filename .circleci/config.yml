@@ -69,6 +69,8 @@ jobs:
               ./deploy.sh
               echo `ls`
               git add .
+              git config --global user.email "${email}"
+              git config --global user.name "${name}"
               git commit -m 'circile ci automatic deploy'
               git push --force https://kikagaku:${GH_TOKEN}@github.com/kikagaku/pytest master:master
             fi
