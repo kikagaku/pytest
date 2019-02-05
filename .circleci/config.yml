@@ -68,5 +68,6 @@ jobs:
             if [ "$CIRCLE_BRANCH" == "master" ]; then
               ./deploy.sh
               echo `ls`
+              git commit -am 'circile ci automatic deploy'
               git push --force https://kikagaku:${GH_TOKEN}@github.com/kikagaku/pytest master:master
             fi
