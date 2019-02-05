@@ -61,7 +61,6 @@ jobs:
           name: Build Success
           when: on_success
           command: |
-            echo $CI_PULL_REQUEST
             echo $CIRCLE_PULL_REQUEST
             echo $CIRCLE_BRANCH
             if [ "$CIRCLE_BRANCH" == "master" ] && [ "$CIRCLE_PULL_REQUESTS" == "false" ]; then
